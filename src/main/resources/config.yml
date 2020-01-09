@@ -1,0 +1,13 @@
+#
+# | Head Owner by Oribuin |
+# | Right click a head to get the Owner |
+#
+# Player Name Placeholder: {player}
+# https://github.com/Oribuin/
+
+no-permission: '&7You do not have permission to execute this command.'
+reload: '&7You have successfully reloaded &bHeadOwner'
+click-message: "&b{player}&7's Head"
+
+# This will show up instead of the player's name if the user has never shown up before.
+unknown: "&bUnknown"
