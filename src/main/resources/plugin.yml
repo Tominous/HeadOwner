@@ -1,8 +1,8 @@
 name: HeadOwner
-main: me.oribuin.headowner.HeadOwner
-description: Get the owner of a head.
-version: 1.0.0
-api-version: "1.14"
+main: xyz.oribuin.headowner.HeadOwner
+description: Right click a head to get the find out the owner of it.
+version: @version@
+api-version: "1.13"
 author: Oribuin
 commands:
   hdreload:

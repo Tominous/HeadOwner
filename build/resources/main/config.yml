@@ -1,13 +1,16 @@
 #
 # | Head Owner by Oribuin |
-# | Right click a head to get the Owner |
+# | Right click a head to get the find out the owner of it |
 #
 # Player Name Placeholder: {player}
-# https://github.com/Oribuin/
+# https://github.com/Oribuin/HeadOwner/
 
 no-permission: '&7You do not have permission to execute this command.'
 reload: '&7You have successfully reloaded &bHeadOwner'
-click-message: "&b{player}&7's Head"
-
+click-message: '&b{player}&7''s Head'
 # This will show up instead of the player's name if the user has never shown up before.
-unknown: "&bUnknown"
+unknown: '&bUnknown'
+# This is the action that will trigger the event
+# Only use RIGHT_CLICK_BLOCK or LEFT_CLICK_BLOCK or you will get a NullPointerException
+# Default: RIGHT_CLICK_BLOCK
+action: 'RIGHT_CLICK_BLOCK'

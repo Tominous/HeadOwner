@@ -1,4 +1,4 @@
-package me.oribuin.headowner.persist;
+package xyz.oribuin.headowner.persist;
 
 import org.bukkit.ChatColor;
 
