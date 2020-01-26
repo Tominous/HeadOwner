@@ -1,6 +1,7 @@
 package xyz.oribuin.headowner;
 
-import xyz.oribuin.headowner.Commands.CmdReload;
+import org.bukkit.Color;
+import xyz.oribuin.headowner.cmds.CmdReload;
 import xyz.oribuin.headowner.hooks.Metrics;
 import xyz.oribuin.headowner.listeners.HeadInteract;
 import org.bukkit.Bukkit;
@@ -18,11 +19,19 @@ public class HeadOwner extends JavaPlugin {
         PluginManager pm = Bukkit.getPluginManager();
 
         /*
+         * Dependency checks
+         */
+
+        if (pm.getPlugin("HolographicDisplays") == null)
+            this.getServer().getConsoleSender().sendMessage(ColorU.cl("&7[&bHeadOwner&7] &fHolographicDisplays is not installed, therefor Holograms will not work."));
+
+
+        /*
          * Command Registering
          */
-        getCommand("hdreload").setExecutor(new CmdReload(this));
+        getCommand("horeload").setExecutor(new CmdReload(this));
 
-        /**
+        /*
          * Event Registering
          */
 
@@ -50,6 +59,7 @@ public class HeadOwner extends JavaPlugin {
                         "\n&6Plugin: &f" + this.getDescription().getName() +
                         "\n&6Author: &f" + this.getDescription().getAuthors().get(0) +
                         "\n&6Version: &f" + this.getDescription().getVersion() +
+                        "\n&6Website: &f" + this.getDescription().getWebsite() +
                         "\n\n&e******************"
         ));
     }

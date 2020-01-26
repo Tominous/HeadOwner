@@ -1,5 +1,7 @@
-package xyz.oribuin.headowner.Commands;
+package xyz.oribuin.headowner.cmds;
 
+import com.gmail.filoghost.holographicdisplays.api.Hologram;
+import com.gmail.filoghost.holographicdisplays.api.HologramsAPI;
 import org.bukkit.Bukkit;
 import xyz.oribuin.headowner.HeadOwner;
 import xyz.oribuin.headowner.persist.ColorU;
@@ -33,6 +35,12 @@ public class CmdReload implements CommandExecutor {
 
         // Reload the config.
         plugin.reloadConfig();
+
+        //Delete all Holograms on reload
+        if (HologramsAPI.getHolograms(plugin).size() > 0) {
+            HologramsAPI.getHolograms(plugin).forEach(Hologram::delete);
+        }
+
         // Notify Console that the plugin was reloaded.
         Bukkit.getConsoleSender().sendMessage(ColorU.cl(config.getString("prefix") + " &fReloaded " + plugin.getDescription().getName() + " (&b" + plugin.getDescription().getVersion() + "&f)"));
         return true;

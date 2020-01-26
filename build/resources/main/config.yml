@@ -7,10 +7,30 @@
 
 no-permission: '&7You do not have permission to execute this command.'
 reload: '&7You have successfully reloaded &bHeadOwner'
+
+# Should there be a chat message when clicking a head?
+# Default: true
+chat-message: true
+# The message sent to the player if chat-message is true
 click-message: '&b{player}&7''s Head'
 # This will show up instead of the player's name if the user has never shown up before.
-unknown: '&bUnknown'
+invalid-user: 'Unknown'
 # This is the action that will trigger the event
 # Only use RIGHT_CLICK_BLOCK or LEFT_CLICK_BLOCK or you will get a NullPointerException
 # Default: RIGHT_CLICK_BLOCK
 action: 'RIGHT_CLICK_BLOCK'
+
+holograms:
+  # Should holograms be enabled
+  enabled: true
+  # Should holograms automatically delete?
+  auto-delete: true
+  # Duration until deletion in seconds
+  duration: 5
+  # The design of the holograms
+  format:
+    - '&b[&7Head Owner&b]'
+    - '&b{player}&7''s Head'
+  # This would be the blocks location + a Y so for example
+  # The default values are the most ideal.
+  y-axis: 1
